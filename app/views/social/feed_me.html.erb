@@ -1,0 +1,15 @@
+<%= form_tag({:controller => "social", :action => "update_status"}, :method => "post") do %>
+   <%= text_field_tag "new_status" %>
+   <%= submit_tag 'Share' %>
+<% end %>
+
+<% @items["items"].each do |current| %>
+	<p>
+		<img src="<%= current["user"]["photo"]["smallPhotoUrl"] %>?oauth_token=<%= ENV['sfdc_token'] %>" />
+		<%= current["id"] %>,
+		<%= current["body"]["text"] %>
+		<%= current["user"]["name"] %>
+	</p>
+<% end %>
+
+

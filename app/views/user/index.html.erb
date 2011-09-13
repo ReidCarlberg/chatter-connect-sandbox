@@ -1,0 +1,24 @@
+<h1>Current Session Information</h1>
+
+<% if session[:user_info] %>
+<p>User Info</p>
+<p><%= session[:user_info] %></p>
+<% end %>
+
+<% if session[:user_hash] %>
+<p>User Hash</p>
+<p><%= session[:user_hash] %></p>
+<% end %>
+
+<ul>
+  <li>Ruby: <%=RUBY_VERSION%></li>
+  <li>Gems: <%=`gem list`%></li>
+</ul>
+
+<p>Session</p>
+
+<p><%= session %></p>
+
+<p>Env</p>
+
+<p><%= RAILS_ENV %></p>

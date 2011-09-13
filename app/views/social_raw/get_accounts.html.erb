@@ -1,0 +1,6 @@
+<h2>Select Account</h2>
+<ul>
+	<% @accounts['records'].each do |current| %>
+	<li><%= link_to(current['Name'], '/social/raw_feed_record/' + current['Id']) %></li>
+	<% end %>
+</ul>
