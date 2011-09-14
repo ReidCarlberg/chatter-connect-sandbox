@@ -9,7 +9,6 @@
 
 <p><%= link_to('Raw Users (Me)', 'social/raw_users_me') %> |
 <%= link_to('Raw Follows', 'social/raw_follows') %> |
-<%= link_to('Raw Feed (Record - Account 0013000000r0BPlAAM)', 'social/raw_feed_record/0013000000r0BPlAAM') %> |
 <%= link_to('Raw Feed (Record)', 'social/raw_feed_record') %> |
 <%= link_to('Raw Feed (Me)', 'social/raw_feed_me') %></p>
 
@@ -17,9 +16,12 @@
 
 <p><%= link_to('Clean Feed (Me)', 'social/feed_me') %></p>
 
-<h2>Nicer Still</h2>
+<h2>Demo Apps</h2>
 
-<p><%= link_to('Chatter Intranet', 'https://chatter-intranet.heroku.com/') %></p>
-<p></p>
+<ul>
+<li><%= link_to('Chatter Intranet', 'https://chatter-intranet.heroku.com/') %> - <%= link_to('GitHub', 'https://github.com/henriquez/chatter-intranet') %></li>
+<li><%= link_to('Chatter Sales', 'http://chatter-sales.heroku.com/') %> - <%= link_to('GitHub', 'https://github.com/henriquez/chatter-sales') %></li>
+<li><%= link_to('Rhatter (GitHub)', 'https://github.com/quintonwall/rhatter') %> (Rails & JQuery Mobile)</li>
+</ul>
 
 <% end %>

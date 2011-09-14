@@ -6,7 +6,8 @@ class ApplicationController < ActionController::Base
 
   private
     def current_user
-      if session['user_info']
+      #just make sure these are both in place
+      if session['user_info'] && ENV['sfdc_instance_url']
         @current_user = session['user_info']
       end
     end

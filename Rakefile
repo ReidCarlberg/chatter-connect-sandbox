@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-ChatterConnectSandbox::Application.load_tasks
+ChatterAdapterSandbox::Application.load_tasks
