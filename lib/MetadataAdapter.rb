@@ -40,11 +40,11 @@ class MetadataAdapter
     #get the fields
     #TODO figure out what I need to add
     #HACK just using name right now.
-    newObjects = Array.new
     i =0
     myQuery = MetadataAdapter.root_url+"sobjects/" + name + "/"
     while i < Integer(qty) do
       current = { :name => "My Name! #{i}" + (0...8).map{65.+(rand(25)).chr}.join }
+      puts '*********************'
       puts post(myQuery, { :body => current.to_json } );
       i = i + 1
     end

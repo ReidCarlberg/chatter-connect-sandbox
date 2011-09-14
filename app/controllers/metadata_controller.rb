@@ -33,6 +33,7 @@ class MetadataController < ApplicationController
   
   def mass_insert2
     if (params["name"] && params["qty"])
+      MetadataAdapter.mass_insert(params["name"], params["qty"])
       redirect_to "/metadata/query_object/" + params["name"]
     else
       redirect_to "/metadata/list_objects"
