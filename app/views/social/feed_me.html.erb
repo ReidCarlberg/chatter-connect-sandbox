@@ -6,7 +6,7 @@
 <% @items["items"].each do |current| %>
 	<p>
 		<img src="<%= current["user"]["photo"]["smallPhotoUrl"] %>?oauth_token=<%= ENV['sfdc_token'] %>" />
-		<%= current["id"] %>,
+		<%= link_to(current["id"],'/social/raw_feed_item/'+current["id"]) %>,
 		<%= current["body"]["text"] %>
 		<%= current["user"]["name"] %>
 	</p>

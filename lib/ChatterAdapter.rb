@@ -38,6 +38,13 @@ class ChatterAdapter
     get(myQuery)
   end
   
+  #get a specific chatter post
+  def self.feed_item(recordId)
+    ChatterAdapter.set_headers
+    myQuery = ChatterAdapter.root_url + "chatter/feed-items/" + recordId
+    get(myQuery)
+  end
+  
   #show my user information
   def self.users_me
     ChatterAdapter.set_headers

@@ -16,7 +16,14 @@ class SocialRawController < ApplicationController
     else
       redirect_to '/social/accounts'
     end
-    
+  end
+  
+  def raw_feed_item
+    if params['recordId']
+      render :json => ChatterAdapter.feed_item(params['recordId'])
+    else
+      redirect_to '/social/feed_me'
+    end
   end
   
   def raw_users_me

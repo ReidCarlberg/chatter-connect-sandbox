@@ -18,6 +18,8 @@ ChatterConnectSandbox::Application.routes.draw do
   match '/social/accounts' => 'social_raw#get_accounts', :as => :accounts
   match '/social/raw_feed_record/:recordId' => 'social_raw#raw_feed_record'
   match '/social/raw_feed_record' => 'social_raw#raw_feed_record'
+  match '/social/raw_feed_item/:recordId' => 'social_raw#raw_feed_item'
+  match '/social/raw_feed_item' => 'social_raw#raw_feed_item'
   match '/social/feed_me' => 'social#feed_me'
   match '/social/raw_users_me' => 'social_raw#raw_users_me'
   match '/social/update_status' =>'social#update_status'
