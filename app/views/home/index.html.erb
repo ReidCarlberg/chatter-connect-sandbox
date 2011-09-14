@@ -1,4 +1,9 @@
-<h1>Welcome! Chatter Connect Sandbox</h1>
+<h1>Welcome!</h1>
+
+<% if !user_signed_in? %>
+	<h2>Please Sign In</h2>
+	<p>In order to continue, you must sign in.</p>
+<% else %>
 
 <h2>Raw</h2>
 
@@ -16,3 +21,5 @@
 
 <p><%= link_to('Chatter Intranet', 'https://chatter-intranet.heroku.com/') %></p>
 <p></p>
+
+<% end %>
