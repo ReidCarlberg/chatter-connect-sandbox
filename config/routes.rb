@@ -3,6 +3,7 @@ ChatterConnectSandbox::Application.routes.draw do
 
   #Home
   get "home/index"
+  get "home/index2"
 
   #OAUTH2 Session Management
   match '/auth/:provider/callback' => 'sessions#create'
@@ -23,6 +24,14 @@ ChatterConnectSandbox::Application.routes.draw do
   match '/social/feed_me' => 'social#feed_me'
   match '/social/raw_users_me' => 'social_raw#raw_users_me'
   match '/social/update_status' =>'social#update_status'
+  
+  #MetadataAdapter
+  match '/metadata/raw_list_objects' => 'metadata#raw_list_objects'
+  match '/metadata/list_objects' => 'metadata#list_objects'
+  match '/metadata/raw_describe_object/:name' => 'metadata#raw_describe_object'
+  match '/metadata/query_object/:name' => 'metadata#query_object'
+  match '/metadata/mass_insert1/:name' => 'metadata#mass_insert1'
+  match '/metadata/mass_insert2' => 'metadata#mass_insert2'
   
   
   # The priority is based upon order of creation:

@@ -1,0 +1,5 @@
+<%= form_tag({:controller => "metadata", :action => "mass_insert2"}, :method => "post") do %>
+   <%= text_field_tag "name", params["name"] %>
+   <%= text_field_tag "qty", "10" %>
+   <%= submit_tag 'Mass Insert' %>
+<% end %>

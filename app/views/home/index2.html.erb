@@ -1,0 +1,17 @@
+<h1>Welcome!</h1>
+
+<% if !user_signed_in? %>
+	<h2>Please Sign In</h2>
+	<p>In order to continue, you must sign in.</p>
+<% else %>
+
+<p>You are in <%= link_to('index2', '/home/index2') %>.</p>
+
+<h2>Raw</h2>
+
+<p><%= link_to('Raw Object List', '/metadata/raw_list_objects') %> |
+	<%= link_to('Object List', '/metadata/list_objects') %>
+</p>
+
+
+<% end %>

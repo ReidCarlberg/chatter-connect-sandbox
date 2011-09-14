@@ -1,0 +1,6 @@
+<h2>Recent Objects</h2>
+<ul>
+	<% @records['records'].each do |current| %>
+	<li><%= current['Name'] %></li>
+	<% end %>
+</ul>
