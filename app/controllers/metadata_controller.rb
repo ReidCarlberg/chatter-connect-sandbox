@@ -9,11 +9,19 @@ class MetadataController < ApplicationController
   def list_objects
     @objects = MetadataAdapter.list_objects
   end
+
+  def list_objects_all
+    @objects = MetadataAdapter.list_objects
+  end
   
   def raw_describe_object
     render :json => MetadataAdapter.describe_object(params["name"])
   end
-  
+
+  def raw_object
+    render :json => MetadataAdapter.object(params["name"])
+  end
+    
   def query_object
     if (params["name"])
       #render :text => MetadataAdapter.query_object(params["name"])

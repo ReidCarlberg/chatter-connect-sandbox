@@ -28,6 +28,8 @@ ChatterConnectSandbox::Application.routes.draw do
   #MetadataAdapter
   match '/metadata/raw_list_objects' => 'metadata#raw_list_objects'
   match '/metadata/list_objects' => 'metadata#list_objects'
+  match '/metadata/list_objects_all' => 'metadata#list_objects_all'
+  match '/metadata/raw_object/:name' => 'metadata#raw_object'
   match '/metadata/raw_describe_object/:name' => 'metadata#raw_describe_object'
   match '/metadata/query_object/:name' => 'metadata#query_object'
   match '/metadata/mass_insert1/:name' => 'metadata#mass_insert1'

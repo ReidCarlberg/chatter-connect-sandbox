@@ -1,7 +1,6 @@
 <h2>Select Object</h2>
 <ul>
 	<% @objects['sobjects'].each do |current| %>
-	<% if current['custom'] %>
 	<li><%= link_to(current['name'], '/metadata/raw_describe_object/' + current['name']) %> 
 		(
 			<%= link_to('brief','/metadata/raw_object/' + current['name'] ) %> | 
@@ -9,6 +8,5 @@
 			<%= link_to('mass insert','/metadata/mass_insert1/' + current['name'] ) %> 
 			)
 		</li>
-		<% end %>
 	<% end %>
 </ul>

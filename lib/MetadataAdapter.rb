@@ -25,7 +25,14 @@ class MetadataAdapter
     puts myQuery
     get(myQuery)
   end
-  
+
+  #show a single object
+  def self.object(name)
+    MetadataAdapter.set_headers    
+    myQuery = MetadataAdapter.root_url+"sobjects/" + name
+    get(myQuery)
+  end
+    
   #describe a single object
   def self.describe_object(name)
     MetadataAdapter.set_headers    
@@ -43,7 +50,7 @@ class MetadataAdapter
     i =0
     myQuery = MetadataAdapter.root_url+"sobjects/" + name + "/"
     while i < Integer(qty) do
-      current = { :name => "My Name! #{i}" + (0...8).map{65.+(rand(25)).chr}.join }
+      current = { :name => "My Name! " + name + "#{i}" + (0...8).map{65.+(rand(25)).chr}.join }
       puts '*********************'
       puts post(myQuery, { :body => current.to_json } );
       i = i + 1
