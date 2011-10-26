@@ -9,7 +9,7 @@ class ChatterAdapter
 
   #utility
   def self.set_headers
-    headers 'Authorization' => "OAuth #{ENV['sfdc_token']}"
+    headers "Authorization" => "OAuth #{ENV['sfdc_token']}", "Content-Type" => "text/html"
   end
 
   def self.root_url
