@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
     def create
       ENV['sfdc_token'] = request.env['omniauth.auth']['credentials']['token']
-      ENV['sfdc_api_version'] = "22.0"
+      ENV['sfdc_api_version'] = "23.0"
       session[:user_info] = request.env['omniauth.auth']['user_info']
       session[:user_hash] = request.env['omniauth.auth']['extra']['user_hash']
       ENV['sfdc_instance_url'] = session[:user_hash]['urls']['rest']
