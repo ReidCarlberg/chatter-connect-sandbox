@@ -5,10 +5,10 @@
 
 <% @items["items"].each do |current| %>
 	<p>
-		<img src="<%= current["user"]["photo"]["smallPhotoUrl"] %>?oauth_token=<%= ENV['sfdc_token'] %>" />
+		<img src="<%= current["parent"]["photo"]["smallPhotoUrl"] %>?oauth_token=<%= ENV['sfdc_token'] %>" />
 		<%= link_to(current["id"],'/social/raw_feed_item/'+current["id"]) %>,
 		<%= current["body"]["text"] %>
-		<%= current["user"]["name"] %>
+		<%= current["parent"]["name"] %>
 	</p>
 <% end %>
 
