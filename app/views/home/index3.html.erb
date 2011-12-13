@@ -5,8 +5,14 @@
 	<p>In order to continue, you must sign in.</p>
 <% else %>
 
-<h2>Policy History</h2>
+<h2><%= session['user_info']['name'] %> Policy History</h2>
 
-	<p>This is where we put the history.</p>
+<% @policies["items"].each do |current| %>
+	<p> 
+		<%= current["id"] %>,
+		<%= current["startdate__c"] %>
+		<%= current["premium__c"] %>
+	</p>
+<% end %>
 
 <% end %>
