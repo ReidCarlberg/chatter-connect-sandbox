@@ -6,9 +6,9 @@ NOTES:
 * Here's a nice article on Config Vars over at Heroku: http://devcenter.heroku.com/articles/config-vars
 * If you are using Omniauth.rb (and why wouldn't you?), the URI below should work.
 
-export SALESFORCE_OAUTH2_KEY=3MVG99OxTyEMCQ3jnNlWxd6dpYqGI4.gM25tngLiFHeBEBsmDhY36_Ov5c7ldhoLoEIRSXQRFBqnpmRhh3Fy8
-export SALESFORCE_OAUTH2_SECRET=4302526143221950864
-export SALESFORCE_OAUTH2_URI=https://radiant-dawn-7292.herokuapp.com/auth/salesforce/callback
+export SALESFORCE_OAUTH2_KEY=3MVG99OxTyEMCQ3jnNlWxd6dpYnVQQD5bVArPIG1iu.xRnuDifILW.A64EUobfK3vObNOSjd8N1.iS4Im11l.
+export SALESFORCE_OAUTH2_SECRET=5334022999986097547
+export SALESFORCE_OAUTH2_URI=http://localhost:3000/auth/salesforce/callback
 
 
 heroku config:add SALESFORCE_OAUTH2_KEY=3MVG99OxTyEMCQ3jnNlWxd6dpYqGI4.gM25tngLiFHeBEBsmDhY36_Ov5c7ldhoLoEIRSXQRFBqnpmRhh3Fy8

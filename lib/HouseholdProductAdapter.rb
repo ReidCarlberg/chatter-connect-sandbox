@@ -15,9 +15,11 @@ class HouseholdProductAdapter
     @root_url = ENV['sfdc_instance_url'].sub("{version}",ENV['sfdc_api_version'])
   end
 
-  def self.get_all_products
+  def self.get_all_products(userId)
     HouseholdProductAdapter.set_headers
-    get(HouseholdProductAdapter.root_url+"query/?q=#{CGI::escape('SELECT Name, Id, Premium__c, StartDate__c, EndDate__c, Description__c from Household_Product__c Where Account__r.User__c = "+session['user_info']['id'] +" Order By EndDate__c DESC LIMIT 100')}")
+    myQuery = "SELECT Name, Id, Premium__c, Start_Date__c, End_Date__c, Description__c from Household_Product__c Where Account__r.User__c = '"+ userId +"' Order By End_Date__c DESC LIMIT 100"
+    puts myQuery
+    get(HouseholdProductAdapter.root_url+"query/?q=#{CGI::escape(myQuery)}")
   end  
   
 end

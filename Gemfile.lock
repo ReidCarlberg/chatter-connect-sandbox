@@ -122,6 +122,7 @@ GEM
     ruby-openid-apps-discovery (1.2.0)
       ruby-openid (>= 2.1.7)
     rubyntlm (0.1.1)
+    sqlite3 (1.3.5)
     thor (0.14.6)
     treetop (1.4.10)
       polyglot
@@ -136,3 +137,4 @@ DEPENDENCIES
   omniauth
   pg
   rails (= 3.0.9)
+  sqlite3

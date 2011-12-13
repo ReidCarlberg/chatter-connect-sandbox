@@ -1,4 +1,4 @@
-require HouseholdProductAdapter
+require 'HouseholdProductAdapter'
 
 class HomeController < ApplicationController
   def index
@@ -8,7 +8,9 @@ class HomeController < ApplicationController
   end
 
   def index3
-    @policies = HouseholdProductAdapter.get_all_products
+    if session['user_hash'] && session['user_hash']['user_id']
+      @policies = HouseholdProductAdapter.get_all_products(session['user_hash']['user_id'])
+    end
   end
   
 end

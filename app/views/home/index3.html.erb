@@ -7,12 +7,24 @@
 
 <h2><%= session['user_info']['name'] %> Policy History</h2>
 
-<% @policies["items"].each do |current| %>
-	<p> 
-		<%= current["id"] %>,
-		<%= current["startdate__c"] %>
-		<%= current["premium__c"] %>
-	</p>
-<% end %>
+<table>
+	<tr>
+		<td>Name</td>
+		<td>Start</td>
+		<td>End</td>
+		<td>Description</td>
+		<td>Premium</td>
+	</tr>
+	<% @policies['records'].each do |current| %>
+	<tr>
+				<td><%= current['Name'] %></td>
+		<td><%= current['Start_Date__c'] %></td>
+		<td><%= current['End_Date__c'] %></td>
+		<td><%= current['Description__c'] %></td>
+		<td><%= current['Premium__c'] %></td>
+		</tr>
+	<% end %>
+	</table>
+
 
 <% end %>
