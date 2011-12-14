@@ -13,4 +13,9 @@ class HomeController < ApplicationController
     end
   end
   
+  def index4
+    
+  end
+  
+  
 end

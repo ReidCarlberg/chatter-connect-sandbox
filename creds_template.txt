@@ -11,6 +11,4 @@ export SALESFORCE_OAUTH2_SECRET=5334022999986097547
 export SALESFORCE_OAUTH2_URI=http://localhost:3000/auth/salesforce/callback
 
 
-heroku config:add SALESFORCE_OAUTH2_KEY=3MVG99OxTyEMCQ3jnNlWxd6dpYqGI4.gM25tngLiFHeBEBsmDhY36_Ov5c7ldhoLoEIRSXQRFBqnpmRhh3Fy8
-heroku config:add SALESFORCE_OAUTH2_SECRET=4302526143221950864
-heroku config:add SALESFORCE_OAUTH2_URI=https://radiant-dawn-7292.herokuapp.com/auth/salesforce/callback
+heroku config:add SALESFORCE_OAUTH2_KEY=3MVG99OxTyEMCQ3jnNlWxd6dpYqGI4.gM25tngLiFHeBEBsmDhY36_Ov5c7ldhoLoEIRSXQRFBqnpmRhh3Fy8 SALESFORCE_OAUTH2_SECRET=4302526143221950864 SALESFORCE_OAUTH2_URI=https://radiant-dawn-7292.herokuapp.com/auth/salesforce/callback

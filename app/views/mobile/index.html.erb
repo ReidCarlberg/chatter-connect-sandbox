@@ -1,0 +1,21 @@
+<div class="container">
+	<div class="row">
+		<div class="twelve columns">
+			<div class="foundation-header">
+				<h1>Policy History</h1>
+				<h4 class="subheader">Click a policy name to see more details</h4>
+			</div>
+		</div>
+	</div>
+	
+	<div class="row">
+		<div class="three columns">
+			<dl class="nice tabs vertical hide-on-phones">
+				<% @policies['records'].each do |current| %>
+				<dd><a href="index.php"><%= current["Id"] %></a></dd>
+				<% end %>				
+			</dl>
+		</div>
+	</div>
+</div>	
+

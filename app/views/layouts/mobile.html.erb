@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ACME Insurance</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :all %>
+  <%= csrf_meta_tag %>
+</head>
+
+<body>
+	
+  <!-- ZURBar -->
+  <div id="zurBar" class="container">
+    <div class="row">
+      <div class="four columns">
+        <h1><a href="../">My ACME</a></h1>
+      </div>
+      <div class="eight columns hide-on-phones">
+      	<strong class="right">
+			<%= link_to('Home', '/') %> |
+			<% if !user_signed_in? %>
+				<%= link_to('Login', signin_path) %>
+			<% else %>
+				<%= link_to(session['user_info']['name'], '/social/raw_users_me') %> |
+				<%= link_to('Session Info', '/user/index') %> |
+				<%= link_to('Logout', signout_path) %>
+			<% end %>
+      	</strong>
+      </div>
+    </div>
+  </div>
+  <!-- /ZURBar -->
+	
+
+<%= yield %>
+
+
+<p>Other indexes: <%= link_to('main', '/home/index') %>, <%= link_to('two', '/home/index2') %>, <%= link_to('main', '/home/index3') %>. </p>
+
+</body>
+</html>

@@ -1,9 +1,13 @@
 ChatterConnectSandbox::Application.routes.draw do
+  get "mobile/index"
+
   get "user/index"
 
   #Home
   get "home/index"
   get "home/index2"
+  get "home/index3"
+  get "home/index4"
 
   #OAUTH2 Session Management
   match '/auth/:provider/callback' => 'sessions#create'
